@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title> OtpLess.com </title>
+  <script src="https://otpless.com/auth.js"></script>
+</head>
+<div id ="otpless"></div>
+
+<script>  
+function OtpLess(OtplessUser){
+  localStorage.setItem('userinfo',JSON.stringify(OtplessUser))
+}
+const usersinfo=JSON.parse(JSON.stringify(OtplessUser));
+console.log(usersinfo);
+document.getElementById('OtplessUser').innerHTML= `
+Hi, your name is ' <h2> ${usersinfo.waName} </h2>
+<br>
+'Your whatsapp Number is ' <h2>${usersinfo.waNumber}</h2>
+'Your Email is ' <p> ${usersinfo.email.email} </p>
+`;
+
+</script>
+<body>
+</html>
