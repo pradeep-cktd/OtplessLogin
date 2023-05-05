@@ -11,18 +11,18 @@
 <div id ="otpless"></div>
 
 <script>  
-function otpLess(otplessUser){
+function otpless(otplessUser){
   localStorage.setItem('userinfo',JSON.stringify(otplessUser))
-}
-const usersinfo=JSON.parse(JSON.stringify(otplessUser));
+  
+const usersinfo = JSON.parse(JSON.stringify(otplessUser));
 console.log(usersinfo);
-document.getElementById('otplessUser').innerHTML= `
-Hi, your name is ' <h2> ${usersinfo.waName} </h2>
+document.getElementById('otpless').innerHTML= `
+Hi, your name is  <h2> ${usersinfo.waName} </h2>
 <br>
-'Your whatsapp Number is ' <h2>${usersinfo.waNumber}</h2>
-'Your Email is ' <p> ${usersinfo.email.email} </p>
+Your whatsapp Number is  <h2>${usersinfo.waNumber}</h2>
+Your Email is  <p> ${usersinfo.email.email} </p>
 `;
-
+}
 </script>
 <body>
 </html>
